@@ -2,9 +2,9 @@
 
 
 
-    //% color=50 weight=80
-    //% icon="\uf1eb"
-declare namespace maqueenIR {
+//     //% color=50 weight=80
+//     //% icon="\uf1eb"
+// declare namespace maqueenIR {
 
 //     /**
 //      * button pushed.
