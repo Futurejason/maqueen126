@@ -9,21 +9,10 @@
     "files": [
         "maqueen.ts",
         "enums.d.ts",
-       
-  
         "NecIR.cpp",
- 
         "_locales/zh-cn/maqueen-strings.json",
-        "_locales/zh-tw/maqueen-strings.json",
-        "_locales/pt/maqueen-strings.json",
-        "_locales/ja/maqueen-strings.json",
-        "_locales/fr/maqueen-strings.json",
-        "_locales/es/maqueen-strings.json",
-        "_locales/nb/maqueen-strings.json",
         "shims.d.ts",
-        "README.md",
-        "_locales/ru/maqueen-strings.json",
-        "_locales/ru/maqueen-jsdoc-strings.json"
+        "README.md"
     ],
     "testFiles": [
         "test.ts"
