@@ -180,6 +180,7 @@ namespace maqueen {
 
 function valuotokeyConversion():number{
     let irdata:number;
+    uBit.serial.send(irCode());
     switch(irCode()){
         case 0xff00:irdata = 0;break;
         case 0xfe01:irdata = 1;break;
