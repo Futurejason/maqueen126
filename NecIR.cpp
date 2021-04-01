@@ -85,6 +85,7 @@ void remote_decode(void){
  //% 
 int irCode(){
     remote_decode();
+	uBit.serial.send(data);
     return data;
 }
 
