@@ -21,7 +21,7 @@ int logic_value(){//判断逻辑值"0"和"1"子函数
             return 1;
        }
     }
-uBit.serial.printf("error\r\n");
+    uBit.serial.printf("error\r\n");
     return -1;
 }
 
@@ -44,7 +44,6 @@ void pulse_deal(){
         ir_code |=(1<<i);
       }
     }
-
 }
 
 void remote_decode(void){
@@ -85,7 +84,8 @@ void remote_decode(void){
  //% 
 int irCode(){
     remote_decode();
-	uBit.serial.send(data);
+	  uBit.serial.send(data);
+    uBit.serial.send("\r\n");
     return data;
 }
 

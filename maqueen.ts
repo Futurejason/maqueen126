@@ -12,37 +12,16 @@
  * @date  2019-10-08
 */
 
-let maqueencb: Action
-let maqueenmycb: Action
-let maqueene = "1"
-let maqueenparam = 0
-let alreadyInit = 0
-let IrPressEvent = 0
-const MOTER_ADDRESSS = 0x10
-
-enum PingUnit {
-    //% block="cm"
-    Centimeters,
-}
-enum state {
-        state1=0x10,
-        state2=0x11,
-        state3=0x20,
-        state4=0x21
-    }
-interface KV {
-    key: state;
-    action: Action;
-}
 
 //% weight=10 color=#008B00 icon="\uf136" block="Maqueen"
 //% groups=['micro:bit(v2)']
 namespace maqueen {
-    let kbCallback: KV[] = []
+
     export class Packeta {
         public mye: string;
         public myparam: number;
     }
+
 
     let irstate:number;
     let state:number;
