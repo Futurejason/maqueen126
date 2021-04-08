@@ -51,34 +51,7 @@ namespace maqueen {
     //% group="micro:bit(v2)"
     //% blockId=IR_readv2 block="read IR key value"
     export function IR_readV2(): string {
-        let val = valuotokeyConversion();
-        let str;
-        switch (val) {
-            case 11: str = 'A'; break;
-            case 12: str = 'B'; break;
-            case 13: str = 'C'; break;
-            case 14: str = 'D'; break;
-            case 21: str = 'UP'; break;
-            case 66: str = '+'; break;
-            case 24: str = 'LEFT'; break;
-            case 55: str = 'OK'; break;
-            case 22: str = 'RIGHT'; break;
-            case 0: str = '0'; break;
-            case 23: str = 'DOWN'; break;
-            case 99: str = '-'; break;
-            case 1: str = '1'; break;
-            case 2: str = '2'; break;
-            case 3: str = '3'; break;
-            case 4: str = '4'; break;
-            case 5: str = '5'; break;
-            case 6: str = '6'; break;
-            case 7: str = '7'; break;
-            case 8: str = '8'; break;
-            case 9: str = '9'; break;
-            default:
-                str = '-1';
-        }
-        return str;
+        return valuotokeyConversion();
     }
 
     //% weight=2
@@ -92,7 +65,7 @@ namespace maqueen {
         })
     }
 
-    function valuotokeyConversion(): number {
+    function valuotokeyConversion(): string {
         let irdata: number;
         switch (irCode()) {
             case 0xba45: irdata = 11; break;
@@ -119,7 +92,33 @@ namespace maqueen {
             default:
                 irdata = -1;
         }
-        return irdata;
+        let str;
+        switch (irdata) {
+            case 11: str = 'A'; break;
+            case 12: str = 'B'; break;
+            case 13: str = 'C'; break;
+            case 14: str = 'D'; break;
+            case 21: str = 'UP'; break;
+            case 66: str = '+'; break;
+            case 24: str = 'LEFT'; break;
+            case 55: str = 'OK'; break;
+            case 22: str = 'RIGHT'; break;
+            case 0: str = '0'; break;
+            case 23: str = 'DOWN'; break;
+            case 99: str = '-'; break;
+            case 1: str = '1'; break;
+            case 2: str = '2'; break;
+            case 3: str = '3'; break;
+            case 4: str = '4'; break;
+            case 5: str = '5'; break;
+            case 6: str = '6'; break;
+            case 7: str = '7'; break;
+            case 8: str = '8'; break;
+            case 9: str = '9'; break;
+            default:
+                str = '-1';
+        }
+        return str;
     }
 
     basic.forever(() => {
