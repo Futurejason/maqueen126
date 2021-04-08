@@ -17,6 +17,19 @@
 //% groups=['micro:bit(v2)']
 namespace maqueen {
 
+
+
+     /**
+    * init IR sensor value V2.
+    * @param pin describe parameter here, eg: IrPins.P0
+    */
+    //% weight=5
+    //% group="micro:bit(v2)"
+    //% blockId=IR_init block="initialize IR %pin" shim=maqueenIRV2::IR_init
+    export function IR_init(pin: IrPins): void {
+        return;
+    }
+
     export class Packeta {
         public mye: string;
         public myparam: number;
